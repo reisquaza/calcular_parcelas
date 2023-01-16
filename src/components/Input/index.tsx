@@ -1,9 +1,5 @@
 import React from "react";
-
-interface iInput {
-  name: string;
-  type?: string;
-}
+import { iInput } from "../../interfaces";
 
 const Input = ({ name, type }: iInput) => {
   return (
