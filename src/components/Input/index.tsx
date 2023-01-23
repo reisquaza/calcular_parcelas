@@ -1,12 +1,13 @@
-import React from "react";
+import { FC } from "react";
 import { iInput } from "../../interfaces";
+import StyledInput from "./style";
 
-const Input = ({ name, type }: iInput) => {
+const Input: FC<iInput> = ({ title, type, id, register, ...rest }) => {
   return (
-    <>
-      <label>{name}</label>
-      <input type={type} />
-    </>
+    <StyledInput>
+      <label htmlFor={id}>{title}</label>
+      <input type={type} id={id} {...register(id)} {...rest} />
+    </StyledInput>
   );
 };
 

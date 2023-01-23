@@ -1,10 +1,15 @@
+import { FieldValues, UseFormRegister } from "react-hook-form";
+
+
 export interface iInput {
-  name: string;
+  title: string;
+  id: string;
   type?: string;
+  register: UseFormRegister<FieldValues>;
 }
 
 export interface iCalculate {
-  amount: number;
-  installments: number;
-  mdr: number;
+  amount?: string;
+  installments?: string;
+  mdr?: string;
 }
